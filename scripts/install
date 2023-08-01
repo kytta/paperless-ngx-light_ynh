@@ -46,11 +46,11 @@ pushd $install_dir
 	ynh_exec_as $app $install_dir/venv/bin/pip3 install -r "$install_dir/requirements.txt"
 
 	# Installing NLTK data
-	mkdir -p "$install_dir/nltk_data"
-	chown -R "$app:" "$install_dir/nltk_data"
-	ynh_exec_warn_less ynh_exec_as $app $install_dir/venv/bin/python3 -m nltk.downloader -d "$install_dir/nltk_data" snowball_data
-	ynh_exec_warn_less ynh_exec_as $app $install_dir/venv/bin/python3 -m nltk.downloader -d "$install_dir/nltk_data" stopwords
-	ynh_exec_warn_less ynh_exec_as $app $install_dir/venv/bin/python3 -m nltk.downloader -d "$install_dir/nltk_data" punkt
+	# mkdir -p "$install_dir/nltk_data"
+	# chown -R "$app:" "$install_dir/nltk_data"
+	# ynh_exec_warn_less ynh_exec_as $app $install_dir/venv/bin/python3 -m nltk.downloader -d "$install_dir/nltk_data" snowball_data
+	# ynh_exec_warn_less ynh_exec_as $app $install_dir/venv/bin/python3 -m nltk.downloader -d "$install_dir/nltk_data" stopwords
+	# ynh_exec_warn_less ynh_exec_as $app $install_dir/venv/bin/python3 -m nltk.downloader -d "$install_dir/nltk_data" punkt
 
 	deactivate
 )
